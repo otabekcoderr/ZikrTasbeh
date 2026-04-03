@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>Tasbeh</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ONBOARDING -->
+<div id="onboard">
+  <div class="ob-slides">
+    <div class="ob-slide active"><div class="ob-icon">📿</div><div class="ob-title">Xush kelibsiz!</div><div class="ob-desc">Bu raqamli tasbeh — zikrini sanash uchun qulay va go'zal ilova.</div></div>
+    <div class="ob-slide"><div class="ob-icon">🪣</div><div class="ob-title">Shishali chelak</div><div class="ob-desc">Har bosilganda pufakcha chelakka tushadi. Limitga yetganda chelak surilib yangi keladi.</div></div>
+    <div class="ob-slide"><div class="ob-icon">⭐</div><div class="ob-title">Daraja tizimi</div><div class="ob-desc">Har zikr uchun ball. Duo kuchliroq va limit ko'p bo'lsa — ko'proq ball!</div></div>
+    <div class="ob-slide"><div class="ob-icon">🌿</div><div class="ob-title">Tayyor!</div><div class="ob-desc">Duo va chegara surish orqali tanlang yoki o'zingiz kiriting.</div></div>
+  </div>
+  <div class="ob-dots">
+    <div class="ob-dot active"></div><div class="ob-dot"></div><div class="ob-dot"></div><div class="ob-dot"></div>
+  </div>
+  <button class="ob-btn" id="obBtn" onclick="obNext()">Keyingisi →</button>
+</div>
+
+<!-- SCREEN 1 -->
+<div id="screen-select">
+  <div class="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+  <div class="bismillah-tr">Bismillahir rohmanir rohiym</div>
+
+  <div class="sel-logo">📿</div>
+  <div class="sel-title">Tasbeh</div>
+  <div class="sel-sub">Duo va chegara tanlang</div>
+
+  <div class="picker-section">
+    <div class="picker-label">Duo</div>
+    <div class="picker-outer">
+      <div class="picker-highlight"></div>
+      <div class="picker-scroll" id="duoPicker"></div>
+    </div>
+  </div>
+
+  <div class="custom-dua-wrap">
+    <input type="text" id="customDua" placeholder="Yoki o'z duoingizni yozing..." maxlength="80">
+  </div>
+
+  <div class="picker-section">
+    <div class="picker-label">Chegara</div>
+    <div class="picker-outer">
+      <div class="picker-highlight"></div>
+      <div class="picker-scroll" id="limitPicker"></div>
+    </div>
+  </div>
+
+  <button class="start-btn" onclick="startTasbeh()">Boshlash →</button>
+</div>
+
+<!-- SCREEN 2 -->
+<div id="screen-main">
+  <div class="topbar">
+    <button class="back-btn" onclick="goBack()">←</button>
+    <div class="main-duo-name" id="mainDuoName">Subhanalloh</div>
+    <div class="level-badge" id="levelBadge"><span class="star">🌱</span><span id="levelText">1-daraja</span></div>
+  </div>
+
+  <div class="top-arabic">بِسْمِ اللَّهِ</div>
+
+  <div class="bucket-area">
+    <div class="bucket" id="bucket">
+      <div class="bucket-fill" id="bucketFill"></div>
+      <div class="bucket-label" id="bucketLabel">0</div>
+    </div>
+  </div>
+
+  <div id="count">0</div>
+
+  <div class="tupButton main-btn-wrap">
+    <button onclick="increment()" type="button" id="mainBtn">Bosing</button>
+  </div>
+
+  <button class="reset-btn" onclick="reset()">🔄 Qayta boshlash</button>
+</div>
+<script src="main.js"></script>
+</body>
+</html>
